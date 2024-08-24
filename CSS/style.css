@@ -1,0 +1,137 @@
+/* Fundo geral e cores de texto */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #FFFFFF; /* Fundo Branco */
+    color: #000000; /* Texto Preto */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo Preto */
+    color: #FFFFFF; /* Texto Branco */
+    padding: 10px; /* Reduzido o padding */
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px; /* Reduzido o espaçamento */
+    color: #FF5E5E; /* Primary Color */
+}
+
+/* Estilo dos itens da sidebar */
+.sidebar ul {
+    list-style-type: none; /* Remove as bolinhas da lista */
+    padding: 0; /* Remove o padding padrão da lista */
+}
+
+.sidebar ul li {
+    margin-bottom: 10px; /* Reduzido o espaçamento entre os itens */
+    cursor: pointer;
+    background: transparent; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    padding: 5px 10px; /* Reduzido o padding interno */
+    transition: color 0.3s ease;
+}
+
+/* Estilo dos links dentro da sidebar */
+.sidebar ul li a {
+    color: inherit; /* Mantém a cor do texto branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    display: block; /* Faz o link ocupar todo o espaço do item da lista */
+}
+
+/* Estilo hover para os links */
+.sidebar ul li a:hover {
+    color: #FF5E5E; /* Cor vermelha ao passar o mouse */
+}
+
+/* Estilo da área principal do conteúdo */
+.main-content {
+    flex: 1;
+    padding: 15px; /* Reduzido o padding */
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #000000; /* Texto Preto */
+}
+
+.user-info input[type="search"] {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 1px solid #FF5E5E; /* Primary Color */
+    background-color: #FFFFFF; /* Fundo Branco */
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #FF5E5E; /* Primary Color */
+    color: #FFFFFF; /* Texto Branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px; /* Reduzido o espaçamento entre os cards */
+    margin-top: 15px; /* Reduzido o espaçamento acima do dashboard */
+}
+
+.card, .product-info, .summary-cards, .activity-cards, .stock-purchase-sales, .sales-chart, .recent-sales, .active-clients {
+    background-color: #FFFFFF; /* Fundo Branco */
+    padding: 15px; /* Reduzido o padding interno */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary-cards, .activity-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card p, .stock-info p, .purchase-info p, .sales-info p {
+    font-size: 24px;
+    margin: 0;
+    color: #000000; /* Texto Preto */
+}
+
+.card span, .stock-info span, .purchase-info span, .sales-info span {
+    color: #FF5E5E; /* Primary Color */
+}
+
+.stock-purchase-sales, .sales-chart {
+    grid-column: span 2;
+}
+
+#salesChart {
+    width: 100%;
+    height: 300px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}

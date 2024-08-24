@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - Análises e Desempenho</title>
+    <link rel="stylesheet" href="../CSS/reports.css"> <!-- Link para o arquivo CSS específico -->
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Inventário</h2>
+        <ul>
+            <li><a href="index.html">Painel de Controle</a></li>
+            <li><a href="inventory.html">Inventário</a></li>
+            <li><a href="purchases.html">Compras</a></li>
+            <li><a href="reports.html" id="current-page">Relatórios</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Relatórios e Análises</h1>
+        </header>
+
+        <section class="report-section">
+            <!-- Filtros de Relatórios -->
+            <div class="filters">
+                <h2>Filtrar Relatórios</h2>
+                <form id="filter-form">
+                    <div class="form-group">
+                        <label for="report-type">Tipo de Relatório:</label>
+                        <select id="report-type" name="report-type" required>
+                            <option value="vendas">Vendas</option>
+                            <option value="clientes">Clientes</option>
+                            <option value="produtos">Produtos</option>
+                            <option value="financeiro">Financeiro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="report-period">Período:</label>
+                        <select id="report-period" name="report-period" required>
+                            <option value="7dias">Últimos 7 dias</option>
+                            <option value="30dias">Últimos 30 dias</option>
+                            <option value="trimestre">Último Trimestre</option>
+                            <option value="ano">Ano Atual</option>
+                            <option value="custom">Personalizado</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="custom-period" style="display: none;">
+                        <label for="start-date">Data de Início:</label>
+                        <input type="date" id="start-date" name="start-date">
+                        <label for="end-date">Data de Fim:</label>
+                        <input type="date" id="end-date" name="end-date">
+                    </div>
+                    <button type="submit" class="btn">Gerar Relatório</button>
+                </form>
+            </div>
+
+            <!-- Exibição de Relatórios -->
+            <div class="report-results">
+                <h2>Resultados do Relatório</h2>
+                <div id="report-output">
+                    <!-- Gráficos e Tabelas Dinâmicos serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../JS/reports.js"></script> <!-- Link para o arquivo JS -->
+</body>
+</html>

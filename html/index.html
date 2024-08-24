@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle - Macarico</title>
+    <link rel="stylesheet" href="../CSS/style.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Inventário</h2>
+        <ul>
+            <li><a>Painel de Controle</a></li>
+            <li><a href="inventory.html" id="inventory-link">Inventário</a></li>
+            <li><a href="purchases.html" id="purchases-link">Compras</a></li>
+            <li><a href="reports.html" id="reports-link">Relatórios</a></li>
+
+        </ul>
+        
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Olá, José</h1>
+            <div class="user-info">
+                <input type="search" id="search-bar" placeholder="Pesquisar itens">
+                <div class="user-icon">AAA</div>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <!-- Resumo do Inventário -->
+            <div class="inventory-summary">
+                <h3>Resumo do Inventário</h3>
+                <div class="summary-cards">
+                    <div class="card" id="inventory-value">
+                        <p>€10.000</p>
+                        <span>Valor do Inventário</span>
+                    </div>
+                    <div class="card" id="stock-quantity">
+                        <p>6000</p>
+                        <span>Quantidade em Estoque</span>
+                    </div>
+                    <div class="card" id="incoming-quantity">
+                        <p>102</p>
+                        <span>Quantidade a Receber</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráfico de Vendas -->
+            <div class="sales-chart">
+                <h3>Gráfico de Vendas</h3>
+                <canvas id="salesChart"></canvas> <!-- O gráfico será renderizado aqui -->
+            </div>
+
+            <!-- Detalhes do Produto -->
+            <div class="product-details">
+                <h3>Detalhes do Produto</h3>
+                <div class="product-info">
+                    <p id="low-stock-items">61</p>
+                    <span>Itens com Estoque Baixo</span>
+                    <p id="total-items">319</p>
+                    <span>Todos os Itens</span>
+                </div>
+            </div>
+
+            <!-- Lista de Últimas Vendas -->
+            <div class="recent-sales">
+                <h3>Últimas Vendas</h3>
+                <ul id="salesList">
+                    <!-- Lista de vendas será inserida dinamicamente -->
+                </ul>
+            </div>
+
+            <!-- Relatório de Estoque, Compras e Vendas -->
+            <div class="stock-purchase-sales">
+                <h3>Relação de Estoque, Compras e Vendas</h3>
+                <div class="stock-info">
+                    <p id="stock-total">6000</p>
+                    <span>Quantidade Total em Estoque</span>
+                </div>
+                <div class="purchase-info">
+                    <p id="purchased-total">1000</p>
+                    <span>Total Comprado</span>
+                </div>
+                <div class="sales-info">
+                    <p id="sold-total">1500</p>
+                    <span>Total Vendido</span>
+                </div>
+            </div>
+
+            <!-- Resumo dos Clientes Mais Ativos -->
+            <div class="active-clients">
+                <h3>Clientes Mais Ativos</h3>
+                <ul id="activeClients">
+                    <!-- Lista de clientes ativos será inserida dinamicamente -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../JS/scripts.js"></script> <!-- Link para o arquivo JS -->
+</body>
+</html>

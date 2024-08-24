@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macarico - Vendas</title>
+    <link rel="stylesheet" href="sales.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Vendas</h2>
+        <ul>
+            <li><a href="index.html">Painel de Controle</a></li>
+            <li><a href="inventory.html">Inventário</a></li>
+            <li><a href="sales.html" class="active">Vendas</a></li>
+            <li><a href="purchases.html">Compras</a></li>
+            <li><a href="reports.html">Relatórios</a></li>
+            <li><a href="documents.html">Documentos</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Resumo de Vendas</h1>
+            <div class="user-info">
+                <input type="search" placeholder="Pesquisar itens">
+                <div class="user-icon">AAA</div>
+            </div>
+        </header>
+
+        <div class="sales-summary">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Canal</th>
+                        <th>Confirmado</th>
+                        <th>Embalado</th>
+                        <th>Enviado</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Conteúdo dinâmico -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../JS/sales.js"></script>
+</body>
+</html>
