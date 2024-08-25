@@ -1,0 +1,47 @@
+Array
+(
+    [cliente] => maria
+    [produto] => abacate
+    [quantidade] => 2
+    [preco] => 2
+)
+Array
+(
+    [cliente] => maria
+    [produto] => abacate
+    [quantidade] => 2
+    [preco] => 2
+)
+Array
+(
+    [cliente] => maria
+    [produto] => abacate
+    [quantidade] => 2
+    [preco] => 2
+)
+Array
+(
+    [cliente] => maria
+    [produto] => abacate
+    [quantidade] => 2
+    [preco] => 2
+)
+Resposta JSON (405): Array
+(
+    [success] => 
+    [message] => Method Not Allowed
+)
+Array
+(
+    [cliente] => maria
+    [produto] => abacate
+    [quantidade] => 2
+    [preco] => 2
+)
+Array
+(
+    [cliente] => maria
+    [produto] => abacate
+    [quantidade] => 2
+    [preco] => 2
+)

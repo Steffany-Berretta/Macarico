@@ -26,9 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const formData = new FormData(filterForm);
 
-        fetch(`../PHP/get_report.php?type=${type}&period=${period}`, {
+        fetch('../PHP/generate_report.php?type=${type}&period=${period}', {
             method: 'POST',
             body: formData
+        
+        
         })
         .then(response => response.json())
         .then(data => {

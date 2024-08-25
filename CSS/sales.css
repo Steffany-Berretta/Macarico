@@ -1,24 +1,25 @@
-/* sales.css */
-
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     height: 100vh;
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #f5f5f5; /* Fundo levemente cinza para diferenciar a área de trabalho */
+    color: #333; /* Cor do texto padrão */
 }
 
 .sidebar {
     width: 250px;
-    background-color: #000000;
-    color: #FFFFFF;
+    background-color: #1c1c1c; /* Preto suave para a barra lateral */
+    color: #fff;
     padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar a barra lateral */
 }
 
 .sidebar h2 {
-    color: #FF5E5E;
+    color: #ff5e5e; /* Vermelho vivo */
+    margin-bottom: 20px;
+    font-size: 22px;
 }
 
 .sidebar ul {
@@ -31,37 +32,116 @@ body {
 }
 
 .sidebar ul li a {
-    color: #FFFFFF;
+    color: #ccc; /* Cinza claro */
     text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
 }
 
+.sidebar ul li a:hover,
 .sidebar ul li a.active {
-    color: #FF5E5E;
+    color: #ff5e5e; /* Vermelho vivo ao passar o mouse ou quando ativo */
 }
 
 .main-content {
     flex: 1;
-    padding: 20px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra interna para destaque */
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo for longo */
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.sales-summary {
-    margin-top: 20px;
+header h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info input[type="search"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.user-icon {
+    background-color: #ff5e5e;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1;
+}
+
+.sales-chart,
+.sales-summary,
+.product-details,
+.stock-purchase-sales,
+.active-clients {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .sales-summary table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 .sales-summary th, .sales-summary td {
     padding: 15px;
     text-align: left;
-    border-bottom: 1px solid #F0F0F0;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.sales-summary th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #666;
+}
+
+.sales-summary td {
+    background-color: #fff;
+}
+
+.sales-summary tr:hover {
+    background-color: #f1f1f1; /* Destaque na linha ao passar o mouse */
+}
+
+.card {
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: calc(33% - 20px);
+    text-align: center;
+    color: #ff5e5e;
+    font-weight: bold;
+}
+
+.card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
 }

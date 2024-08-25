@@ -11,8 +11,9 @@
         <h2>Inventário</h2>
         <ul>
             <li><a href="index.html">Painel de Controle</a></li>
-            <li><a href="inventory.html" id="current-page">Inventário</a></li>
+            <li><a href="inventory.html">Inventário</a></li>
             <li><a href="purchases.html">Compras</a></li>
+            <li><a href="sales.html">Vendas</a></li> <!-- Novo link adicionado -->
             <li><a href="reports.html">Relatórios</a></li>
 
         </ul>
@@ -44,7 +45,7 @@
 
             <!-- Formulário de Nova Venda -->
             <h2>Adicionar Nova Venda</h2>
-            <form id="new-sale-form">
+            <form id="new-sale-form" action="../PHP/add_sale.php" method="POST">
                 <div class="form-group">
                     <label for="cliente">Cliente:</label>
                     <input type="text" id="cliente" name="cliente" placeholder="Pesquisar cliente" autocomplete="off" required>
