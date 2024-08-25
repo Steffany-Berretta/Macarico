@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Fornecedor</title>
+</head>
+<body>
+    <h1>Excluir Fornecedor</h1>
+    <form action="../php/routes/fornecedor_handler.php?action=delete" method="POST">
+        ID do Fornecedor: <input type="number" name="id_fornecedor" required><br>
+        <input type="submit" value="Excluir Fornecedor">
+    </form>
+</body>
+</html>

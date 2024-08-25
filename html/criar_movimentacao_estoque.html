@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Movimentação de Estoque</title>
+</head>
+<body>
+    <h1>Criar Movimentação de Estoque</h1>
+    <form action="../php/routes/movimentacao_estoque_handler.php?action=create" method="POST">
+        ID do Produto: <input type="number" name="id_produto" required><br>
+        Quantidade: <input type="number" name="quantidade" required><br>
+        Tipo de Movimentação: <input type="text" name="tipo_movimentacao" required><br>
+        Data da Movimentação: <input type="datetime-local" name="data_movimentacao" required><br>
+        Observação: <input type="text" name="observacao"><br>
+        <input type="submit" value="Criar Movimentação">
+    </form>
+</body>
+</html>

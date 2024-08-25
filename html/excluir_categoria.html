@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Categoria</title>
+</head>
+<body>
+    <h1>Excluir Categoria</h1>
+    <form action="../php/routes/categoria_handler.php?action=delete" method="POST">
+        ID da Categoria: <input type="number" name="id_categoria" required><br>
+        <input type="submit" value="Excluir Categoria">
+    </form>
+</body>
+</html>

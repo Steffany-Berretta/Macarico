@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Categoria</title>
+</head>
+<body>
+    <h1>Atualizar Categoria</h1>
+    <form action="../php/routes/categoria_handler.php?action=update" method="POST">
+        ID da Categoria: <input type="number" name="id_categoria" required><br>
+        Nome: <input type="text" name="nome" required><br>
+        Descrição: <input type="text" name="descricao"><br>
+        <input type="submit" value="Atualizar Categoria">
+    </form>
+</body>
+</html>

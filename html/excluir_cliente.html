@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Cliente</title>
+</head>
+<body>
+    <h1>Excluir Cliente</h1>
+    <form action="../php/routes/cliente_handler.php?action=delete" method="POST">
+        ID do Cliente: <input type="number" name="id_cliente" required><br>
+        <input type="submit" value="Excluir Cliente">
+    </form>
+</body>
+</html>

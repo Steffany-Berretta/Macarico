@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Venda</title>
+</head>
+<body>
+    <h1>Atualizar Venda</h1>
+    <form action="../php/routes/venda_handler.php?action=update" method="POST">
+        ID da Venda: <input type="number" name="id_venda" required><br>
+        ID do Cliente: <input type="number" name="id_cliente" required><br>
+        Data da Venda: <input type="datetime-local" name="data_venda" required><br>
+        Valor Total: <input type="number" step="0.01" name="valor_total" required><br>
+        Tipo de Pagamento: <input type="text" name="tipo_pagamento" required><br>
+        <input type="submit" value="Atualizar Venda">
+    </form>
+</body>
+</html>
