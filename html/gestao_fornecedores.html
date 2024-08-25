@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Clientes</title>
+    <title>Gestão de Fornecedores</title>
     <link rel="stylesheet" href="../CSS/estilo.css">
 </head>
 <body>
     <header>
-        <h1>Gestão de Clientes</h1>
+        <h1>Gestão de Fornecedores</h1>
         <nav>
             <ul>
                 <li><a href="gestao_clientes.html">Gestão de Clientes</a></li>
@@ -19,25 +19,29 @@
             </ul>
         </nav>
     </header>
-    
+
     <aside class="sidebar">
         <nav>
             <ul>
-                <li><a href="#criar-cliente">Criar Cliente</a></li>
-                <li><a href="#listar-clientes">Listar Clientes</a></li>
-                <li><a href="#atualizar-cliente">Atualizar Cliente</a></li>
+                <li><a href="#criar-fornecedor">Criar Fornecedor</a></li>
+                <li><a href="#listar-fornecedores">Listar Fornecedores</a></li>
+                <li><a href="#atualizar-fornecedor">Atualizar Fornecedor</a></li>
+                <li><a href="#excluir-fornecedor">Excluir Fornecedor</a></li>
             </ul>
         </nav>
     </aside>
-    
+
     <main class="main-content">
         <div class="form-container">
-            <!-- Criar Cliente -->
-            <section id="criar-cliente">
-                <h2>Criar Cliente</h2>
-                <form id="form-criar-cliente">
+            <!-- Criar Fornecedor -->
+            <section id="criar-fornecedor">
+                <h2>Criar Fornecedor</h2>
+                <form id="form-criar-fornecedor">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required><br>
+                    
+                    <label for="contato">Contato:</label>
+                    <input type="text" id="contato" name="contato" required><br>
                     
                     <label for="telefone">Telefone:</label>
                     <input type="text" id="telefone" name="telefone" required><br>
@@ -48,23 +52,23 @@
                     <label for="endereco">Endereço:</label>
                     <input type="text" id="endereco" name="endereco" required><br>
                     
-                    <label for="cpf_cnpj">CPF/CNPJ:</label>
-                    <input type="text" id="cpf_cnpj" name="cpf_cnpj" required><br>
-                    
-                    <button type="button" onclick="criarCliente()">Criar Cliente</button>
+                    <button type="button" onclick="criarFornecedor()">Criar Fornecedor</button>
                 </form>
                 <p id="mensagem-criar"></p>
             </section>
 
-            <!-- Atualizar Cliente -->
-            <section id="atualizar-cliente">
-                
-                <form id="form-atualizar-cliente" style="display:none;">
-                    <label for="id_cliente">ID do Cliente:</label>
-                    <input type="number" id="id_cliente" name="id_cliente" required><br>
+            <!-- Atualizar Fornecedor -->
+            <section id="atualizar-fornecedor">
+            
+                <form id="form-atualizar-fornecedor">
+                    <label for="id_fornecedor">ID do Fornecedor:</label>
+                    <input type="number" id="id_fornecedor" name="id_fornecedor" required><br>
                     
                     <label for="nome-atualizar">Nome:</label>
                     <input type="text" id="nome-atualizar" name="nome"><br>
+                    
+                    <label for="contato-atualizar">Contato:</label>
+                    <input type="text" id="contato-atualizar" name="contato"><br>
                     
                     <label for="telefone-atualizar">Telefone:</label>
                     <input type="text" id="telefone-atualizar" name="telefone"><br>
@@ -75,28 +79,23 @@
                     <label for="endereco-atualizar">Endereço:</label>
                     <input type="text" id="endereco-atualizar" name="endereco"><br>
                     
-                    <label for="cpf_cnpj-atualizar">CPF/CNPJ:</label>
-                    <input type="text" id="cpf_cnpj-atualizar" name="cpf_cnpj"><br>
-                    
-                    <button type="button" onclick="atualizarCliente()">Atualizar Cliente</button>
+                    <button type="button" onclick="atualizarFornecedor()">Atualizar Fornecedor</button>
                 </form>
                 <p id="mensagem-atualizar"></p>
             </section>
         </div>
 
-        <!-- Listar Clientes -->
-        <section id="listar-clientes">
-            <h2>Listar Clientes</h2>
-            <button type="button" onclick="listarClientes()">Carregar Lista de Clientes</button>
-            <ul id="lista-clientes"></ul>
+        <!-- Listar Fornecedores -->
+        <section id="listar-fornecedores">
+            <h2>Listar Fornecedores</h2>
+            <button type="button" onclick="listarFornecedores()">Carregar Lista de Fornecedores</button>
+            <ul id="lista-fornecedores"></ul>
         </section>
     </main>
 
-    <script src="../JS/clientes.js"></script>
-
+    <script src="../JS/fornecedores.js"></script>
     <footer>
         <p>&copy; 2024 Sistema de Gestão. Todos os direitos reservados.</p>
     </footer>
 </body>
-
 </html>

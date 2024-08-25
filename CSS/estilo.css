@@ -1,4 +1,4 @@
-/* Fundo geral e cores de texto */
+/* Estilos gerais e cores de texto */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -69,7 +69,7 @@ form {
 
 form input[type="text"],
 form input[type="number"],
-form input[type="datetime-local"],
+form input[type="email"],
 form button {
     width: 100%;
     padding: 10px;
@@ -90,24 +90,13 @@ form button:hover {
     background-color: #e04c4c;
 }
 
-/* Estilo da lista de vendas */
-#lista-vendas {
+/* Estilo da lista de fornecedores */
+#lista-fornecedores {
     margin-top: 30px;
 }
 
-#lista-vendas h2 {
-    font-size: 20px;
-    color: #000000; /* Texto Preto */
-    margin-bottom: 20px;
-}
-
-#vendas ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#vendas ul li {
-    background-color: #eee;
+#lista-fornecedores li {
+    background-color: #f9f9f9;
     margin: 10px 0;
     padding: 15px;
     border-radius: 8px;
@@ -116,18 +105,6 @@ form button:hover {
     align-items: center;
 }
 
-#vendas ul li button {
-    background-color: #FF5E5E; /* Primary Color */
-    color: #FFFFFF; /* Texto Branco */
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#vendas ul li button:hover {
-    background-color: #e04c4c;
-}
 
 /* Estilo do footer */
 footer {
@@ -137,13 +114,6 @@ footer {
     color: #FFFFFF; /* Texto Branco */
     margin-top: auto;
 }
-
-h2 {
-    font-size: 20px;
-    margin: 0;
-    color: #000000; /* Primary Color */
-}
-
 
 /* Estilo para organizar os formulários em linha */
 .form-container {
@@ -161,38 +131,24 @@ h2 {
     margin-right: 0;
 }
 
-/* Estilo para a lista de clientes */
-#lista-clientes {
-    margin-top: 20px;
-    padding: 0;
-}
-
-#lista-clientes li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-#lista-clientes button {
-    background-color: #FF5E5E;
-    color: #FFF;
+/* Botões de ação (atualizar, excluir, etc.) */
+#lista-fornecedores li button {
+    background-color: #FF5E5E; /* Primary Color */
+    color: #FFFFFF; /* Texto Branco */
     border: none;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-left: 10px;
 }
 
-#lista-clientes button:hover {
-    background-color: #e04e4e;
+#lista-fornecedores li button:hover {
+    background-color: #e04c4c;
 }
 
-
-#form-atualizar-cliente  {
-    display: none; /* Oculta o formulário de atualização inicialmente */
+/* Esconder formulário de atualização inicialmente */
+#form-atualizar-fornecedor {
+    display: none;
 }
 

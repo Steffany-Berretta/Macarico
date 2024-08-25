@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Encomendas</title>
+    <link rel="stylesheet" href="../CSS/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão de Encomendas</h1>
+        <nav>
+            <ul>
+                <li><a href="gestao_clientes.html">Gestão de Clientes</a></li>
+                <li><a href="gestao_encomendas.html">Gestão de Encomendas</a></li>
+                <li><a href="gestao_fornecedores.html">Gestão de Fornecedores</a></li>
+                <li><a href="gestao_produtos.html">Gestão de Produtos</a></li>
+                <li><a href="relatorios.html">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="form-container">
+            <!-- Criar Encomenda -->
+            <section id="criar-encomenda">
+                <h2>Criar Encomenda</h2>
+                <form id="form-criar-encomenda">
+                    <label for="id_cliente">ID do Cliente:</label>
+                    <input type="number" id="id_cliente" name="id_cliente" required><br>
+                    
+                    <label for="data_encomenda">Data da Encomenda:</label>
+                    <input type="datetime-local" id="data_encomenda" name="data_encomenda" required><br>
+                    
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option value="Pendente">Pendente</option>
+                        <option value="Finalizado">Finalizado</option>
+                    </select><br>
+                    
+                    <label for="valor_total">Valor Total:</label>
+                    <input type="number" step="0.01" id="valor_total" name="valor_total" required><br>
+                    
+                    <h3>Itens da Encomenda</h3>
+                    <div id="itens-encomenda">
+                        <!-- Aqui serão inseridos os itens da encomenda dinamicamente -->
+                    </div>
+                    <button type="button" onclick="adicionarItem()">Adicionar Item</button><br>
+
+                    <button type="button" onclick="criarEncomenda()">Criar Encomenda</button>
+                </form>
+                <p id="mensagem-criar"></p>
+            </section>
+
+            <!-- Atualizar Encomenda -->
+            <section id="atualizar-encomenda">
+                <h2>Atualizar Encomenda</h2>
+                <form id="form-atualizar-encomenda">
+                    <label for="id_encomenda">ID da Encomenda:</label>
+                    <input type="number" id="id_encomenda" name="id_encomenda" required><br>
+                    
+                    <label for="id_cliente-atualizar">ID do Cliente:</label>
+                    <input type="number" id="id_cliente-atualizar" name="id_cliente"><br>
+                    
+                    <label for="data_encomenda-atualizar">Data da Encomenda:</label>
+                    <input type="datetime-local" id="data_encomenda-atualizar" name="data_encomenda"><br>
+                    
+                    <label for="status-atualizar">Status:</label>
+                    <select id="status-atualizar" name="status">
+                        <option value="Pendente">Pendente</option>
+                        <option value="Finalizado">Finalizado</option>
+                    </select><br>
+                    
+                    <label for="valor_total-atualizar">Valor Total:</label>
+                    <input type="number" step="0.01" id="valor_total-atualizar" name="valor_total"><br>
+
+                    <h3>Itens da Encomenda</h3>
+                    <div id="itens-encomenda-atualizar">
+                        <!-- Aqui serão inseridos os itens da encomenda dinamicamente -->
+                    </div>
+                    <button type="button" onclick="adicionarItemAtualizar()">Adicionar Item</button><br>
+
+                    <button type="button" onclick="atualizarEncomenda()">Atualizar Encomenda</button>
+                </form>
+                <p id="mensagem-atualizar"></p>
+            </section>
+        </div>
+
+        <!-- Listar Encomendas -->
+        <section id="listar-encomendas">
+            <h2>Listar Encomendas</h2>
+            <button type="button" onclick="listarEncomendas()">Carregar Lista de Encomendas</button>
+            <ul id="lista-encomendas"></ul>
+        </section>
+    </main>
+
+    <script src="../JS/encomendas.js"></script>
+</body>
+</html>
