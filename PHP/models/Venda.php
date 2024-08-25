@@ -113,5 +113,14 @@ class Venda {
 
         return false;
     }
+
+    public function clienteExiste($id_cliente) {
+        $query = "SELECT id_cliente FROM clientes WHERE id_cliente = :id_cliente LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id_cliente', $id_cliente);
+        $stmt->execute();
+        return $stmt->rowCount() > 0;
+    }
+    
 }
 ?>

@@ -13,19 +13,45 @@ class VendaController {
     }
 
     public function create() {
-        if (isset($_POST['id_cliente']) && isset($_POST['data_venda']) && isset($_POST['valor_total']) && isset($_POST['tipo_pagamento'])) {
-            $this->venda->id_cliente = $_POST['id_cliente'];
-            $this->venda->data_venda = $_POST['data_venda'];
-            $this->venda->valor_total = $_POST['valor_total'];
-            $this->venda->tipo_pagamento = $_POST['tipo_pagamento'];
+        // Validação de id_cliente
+        if (!isset($_POST['id_cliente']) || !is_numeric($_POST['id_cliente']) || $_POST['id_cliente'] <= 0) {
+            echo json_encode(["message" => "ID do cliente inválido."]);
+            return;
+        }
 
-            if ($this->venda->create()) {
-                echo json_encode(["message" => "Venda criada com sucesso."]);
-            } else {
-                echo json_encode(["message" => "Falha ao criar a venda."]);
-            }
+        // Verificação se o cliente existe
+        if (!$this->venda->clienteExiste($_POST['id_cliente'])) {
+            echo json_encode(["message" => "Cliente não encontrado."]);
+            return;
+        }
+
+        // Validação de data_venda
+        if (!isset($_POST['data_venda']) || strtotime($_POST['data_venda']) === false) {
+            echo json_encode(["message" => "Data da venda inválida."]);
+            return;
+        }
+
+        // Validação de valor_total
+        if (!isset($_POST['valor_total']) || !is_numeric($_POST['valor_total']) || $_POST['valor_total'] <= 0) {
+            echo json_encode(["message" => "Valor total inválido."]);
+            return;
+        }
+
+        // Validação de tipo_pagamento
+        if (!isset($_POST['tipo_pagamento']) || empty(trim($_POST['tipo_pagamento']))) {
+            echo json_encode(["message" => "Tipo de pagamento inválido."]);
+            return;
+        }
+
+        $this->venda->id_cliente = $_POST['id_cliente'];
+        $this->venda->data_venda = $_POST['data_venda'];
+        $this->venda->valor_total = $_POST['valor_total'];
+        $this->venda->tipo_pagamento = $_POST['tipo_pagamento'];
+
+        if ($this->venda->create()) {
+            echo json_encode(["message" => "Venda criada com sucesso."]);
         } else {
-            echo json_encode(["message" => "Dados incompletos."]);
+            echo json_encode(["message" => "Falha ao criar a venda."]);
         }
     }
 
@@ -57,6 +83,36 @@ class VendaController {
 
     public function update() {
         if (isset($_POST['id_venda']) && isset($_POST['id_cliente']) && isset($_POST['data_venda']) && isset($_POST['valor_total']) && isset($_POST['tipo_pagamento'])) {
+            // Validação de id_cliente
+            if (!is_numeric($_POST['id_cliente']) || $_POST['id_cliente'] <= 0) {
+                echo json_encode(["message" => "ID do cliente inválido."]);
+                return;
+            }
+
+            // Verificação se o cliente existe
+            if (!$this->venda->clienteExiste($_POST['id_cliente'])) {
+                echo json_encode(["message" => "Cliente não encontrado."]);
+                return;
+            }
+
+            // Validação de data_venda
+            if (strtotime($_POST['data_venda']) === false) {
+                echo json_encode(["message" => "Data da venda inválida."]);
+                return;
+            }
+
+            // Validação de valor_total
+            if (!is_numeric($_POST['valor_total']) || $_POST['valor_total'] <= 0) {
+                echo json_encode(["message" => "Valor total inválido."]);
+                return;
+            }
+
+            // Validação de tipo_pagamento
+            if (empty(trim($_POST['tipo_pagamento']))) {
+                echo json_encode(["message" => "Tipo de pagamento inválido."]);
+                return;
+            }
+
             $this->venda->id_venda = $_POST['id_venda'];
             $this->venda->id_cliente = $_POST['id_cliente'];
             $this->venda->data_venda = $_POST['data_venda'];
